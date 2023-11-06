@@ -26,8 +26,8 @@ try:
     print(response['msg'])
     # 获取账号名称
     info_html = session.get(url=info_url,headers=header).text
-#     info = "".join(re.findall('<span class="user-name text-bold-600">(.*?)</span>', info_html, re.S))
-#     print(info)
+    info = "".join(re.findall('<span class="user-name text-bold-600">(.*?)</span>', info_html, re.S))
+    print(info)
     # 进行签到
     result = json.loads(session.post(url=check_url,headers=header).text)
     print(result['msg'])
