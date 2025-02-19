@@ -10,7 +10,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu20.04
+    runs-on: ubuntu-latest
     # if: github.ref == 'refs/heads/master'
 
     steps:
@@ -23,7 +23,7 @@ jobs:
       - name: Set up python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7.17
+          python-version: 3.9.12
 
       - name: Random sleep
         if: github.event_name == 'schedule'
